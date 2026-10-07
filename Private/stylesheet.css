@@ -27,6 +27,10 @@ header{
     }
 }
 
+.low-stock {
+    color: red;
+}
+
 .ordrer-det{
     display: grid;
     padding: 1%;

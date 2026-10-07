@@ -59,6 +59,8 @@ try {
         }
 
     echo("Ordren er gemt! Kundenummer: ". $kundeID);
+    echo("Du bliver videresendt om 5 sekunder.");
 }catch (PDOException $e) {
     echo "Der skete en fejl: " . $e->getMessage();
 }
+header('Refresh: 5; url=../../index.php');

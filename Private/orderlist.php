@@ -146,11 +146,12 @@ $orders = $conn->query($sql)->fetchAll(PDO::FETCH_ASSOC);
                     </tr>
                 </thead>
                 <tbody class="lager-liste-body">
-                    <?php foreach ($bøger as $bog): ?>
+                    <?php foreach ($bøger as $bog):?>
                         <tr>
                             <td><?= htmlspecialchars((string) $bog['ID'], ENT_QUOTES, 'UTF-8') ?></td>
                             <td><?= htmlspecialchars($bog['Titel'], ENT_QUOTES, 'UTF-8') ?></td>
-                            <td><?= htmlspecialchars((string) $bog['Antal'], ENT_QUOTES, 'UTF-8') ?></td>
+                            <td class="<?= (int) $bog['Antal'] <= 10 ? 'low-stock' : '' ?>">
+                                <?= htmlspecialchars((string) $bog['Antal'], ENT_QUOTES, 'UTF-8') ?></td>
                         </tr>
                     <?php endforeach; ?>
                 </tbody>
