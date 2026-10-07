@@ -1,0 +1,63 @@
+header{
+    font-family:trebuchet ms, sans-serif;
+    font-size: 20px;
+}
+.books{
+    display: grid;
+    text-wrap: balance;
+    grid-template-columns: auto auto;
+    gap: 10%;
+    text-align: center;
+    #pic{
+        width: 25%;
+        height: auto;
+        border: 2px solid black;
+    }
+}
+
+.books aside{
+    border: 2px solid black;
+    padding: 10px;
+}
+
+.cart-heading{
+    font-family:trebuchet ms, sans-serif;
+    #cart-heading{
+        padding: 10px;
+    }
+}
+
+.ordrer-det{
+    display: grid;
+    padding: 1%;
+    grid-template-columns: auto auto;
+    gap: 8%;
+    align-items: start;
+}
+.order-section{
+    min-width: 0;
+}
+.order-list, .lager-liste{
+    font-family:trebuchet ms, sans-serif;
+    border-collapse: collapse;
+    width: 100%;
+}
+.order-list th, .order-list td, .lager-liste th, .lager-liste td{
+    border: 1px solid black;
+    padding: 8px;
+    text-align: center;
+}
+footer{ 
+    background-color: transparent;
+    display: flex;
+    flex-direction: row;
+    justify-content: space-evenly;
+    position: static;
+    text-align: center;
+    bottom: auto;
+}
+@media (max-width: 800px){
+    .ordrer-det{
+        grid-template-columns: 1fr;
+    }
+}
